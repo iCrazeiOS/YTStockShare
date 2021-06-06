@@ -1,0 +1,9 @@
+Package: com.icraze.ytstockshare
+Name: YTStockShare
+Version: 1.3
+Architecture: iphoneos-arm
+Description: Replace YouTube's share sheet with the default iOS style!
+Maintainer: iCraze
+Author: iCraze
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000)
