@@ -32,12 +32,12 @@ static YTPlayerViewController *playerControllerInstance;
 	%orig;
 	if ([self.attributedText.string isEqualToString:[[NSBundle mainBundle] localizedStringForKey:@"reel.player.share_video" value:@"Share" table:@"Localizable"]]) {
 		UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleStockShareTap)];
- 		[self.superview addGestureRecognizer:tapGestureRecognizer];
+		[self.superview addGestureRecognizer:tapGestureRecognizer];
 	}
 }
 %new
 -(void)handleStockShareTap {
-	UIActivityViewController *controller = [[UIActivityViewController alloc]initWithActivityItems:@[[NSString stringWithFormat:@"https://youtu.be/%@", playerControllerInstance.contentVideoID]] applicationActivities:nil];
+	UIActivityViewController *controller = [[UIActivityViewController alloc]initWithActivityItems:@[[NSString stringWithFormat:@"https://www.youtube.com/watch?v=%@", playerControllerInstance.contentVideoID]] applicationActivities:nil];
 	[playerControllerInstance presentViewController:controller animated:YES completion:^{}];
 }
 %end
